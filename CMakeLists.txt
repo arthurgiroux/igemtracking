@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( igem )
+find_package( OpenCV REQUIRED )
+add_executable( tracking src/tracking.cpp )
+add_executable( checkgfp src/checkgfp.cpp )
+target_link_libraries( tracking ${OpenCV_LIBS} )
+target_link_libraries( checkgfp ${OpenCV_LIBS} )
